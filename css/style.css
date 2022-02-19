@@ -126,9 +126,10 @@ input:focus{
 
 #quote{
     display: block;
+    width: 700px;
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    right: 1%;
     align-content: center;
     font-style: italic;
     font-weight: bold;
@@ -139,7 +140,7 @@ input:focus{
 #gps{
     position: absolute;
     bottom: 5%;
-    left: 5%;
+    left: 15%;
 }
 
 #gps span{
