@@ -17,7 +17,9 @@ function onGeoOk(position){
 }
 
 function onGeoError(){
-    alert("Can't find you. Noweather for you.");
+    alert("Can't find you. No weather for you.");
+    city.innerText = "Can't find you. No weather for you.";
+    gps.classList.remove("hidden");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

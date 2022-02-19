@@ -3,8 +3,9 @@
 }
 
 body{
-    padding-top: 90px;
+    padding-top: 45px;
     text-align: center;
+    vertical-align: middle;
 }
 
 input:focus{
@@ -38,7 +39,7 @@ input:focus{
 }
 
 #login-form{
-    padding-top: 7%;
+    padding-top: 5%;
     width: 400px;
     position: relative;
     left: 50%;
@@ -92,8 +93,19 @@ input:focus{
 }
 
 #greeting{
+    padding-top: 30px;
     font-size: 45px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#todo{
+    width: 650px;
+    height: 320px;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    border: 2px inset black;
+    border-radius: 10px;
 }
 
 #todo-form input{
@@ -126,7 +138,7 @@ input:focus{
     position: relative;
     top: 15px;
     left: 50%;
-    margin-left: -200px;
+    margin-left: -270px;
     width: 400px;
     text-align: left;
 }
@@ -140,7 +152,7 @@ input:focus{
 
 #todo-list button{
     position: fixed;
-    left: 60%;
+    left: 38%;
     border: 1px solid black;
     border-radius: 3px;
     background: none;
@@ -154,12 +166,16 @@ input:focus{
 }
 
 #quote{
+    padding-top: 10px;
     display: block;
-    width: 700px;
+    width: 650px;
+    height: 140px;
     position: absolute;
     bottom: 5%;
-    right: 1%;
+    right: 5%;
     align-content: center;
+    border: 2px inset black;
+    border-radius: 10px;
     font-style: italic;
     font-weight: bold;
     font-family:'Courier New', Courier, monospace;
@@ -167,9 +183,14 @@ input:focus{
 }
 
 #gps{
+    padding-top: 15px;
     position: absolute;
-    bottom: 5%;
-    left: 15%;
+    width: 650px;
+    height: 140px;
+    bottom: 27%;
+    right: 5%;
+    border: 2px inset black;
+    border-radius: 10px;
 }
 
 #gps span{
