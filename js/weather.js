@@ -1,3 +1,4 @@
+const gps = document.querySelector("#gps");
 const API_KEY = "cded21fb64163e0d720d22f719943370";
 
 function onGeoOk(position){
@@ -7,10 +8,11 @@ function onGeoOk(position){
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            const weather = document.querySelector("#weather span:first-child");
-            const city = document.querySelector("#weather span:last-child");
-            city.innerText = data.name
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+            const weather = document.querySelector("#weather");
+            const city = document.querySelector("#city");
+            city.innerText = `> ${data.name} <`;
+            weather.innerText = `${data.weather[0].main} / ${data.main.temp} ºC`;
+            gps.classList.remove("hidden");
     });
 }
 
