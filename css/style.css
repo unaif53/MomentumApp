@@ -22,6 +22,7 @@ input:focus{
     left: 50%;
     margin-left: -300px;
     vertical-align: middle;
+    box-shadow: 5px 5px 5px 5px black;
 }
 
 #date{
@@ -39,7 +40,7 @@ input:focus{
 }
 
 #login-form{
-    padding-top: 5%;
+    padding-top: 10%;
     width: 400px;
     position: relative;
     left: 50%;
@@ -92,10 +93,33 @@ input:focus{
     transition: background-color .3s ease-in-out;
 }
 
-#greeting{
-    padding-top: 30px;
+#greeting h1{
+    padding-top: 10px;
     font-size: 45px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: sans-serif;
+    text-shadow: 5px 3px 3px rgba(134, 127, 127, 0.7); 
+}
+
+#greeting button{
+    background-color: black;
+    opacity: 0.9;
+    color: antiquewhite;
+    border: 2px antiquewhite;
+    border-radius: 6px;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#greeting button:hover{
+    color: black;
+    border: 2px inset black;
+    background-color: aliceblue;
+    opacity: 0.6;
+    transition: background-color .3s ease-in-out;
 }
 
 #todo{
@@ -106,6 +130,7 @@ input:focus{
     left: 5%;
     border: 2px inset black;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.5);
 }
 
 #todo-form input{
@@ -152,7 +177,7 @@ input:focus{
 
 #todo-list button{
     position: fixed;
-    left: 38%;
+    left: 40%;
     border: 1px solid black;
     border-radius: 3px;
     background: none;
@@ -165,7 +190,18 @@ input:focus{
     transition: background-color .3s ease-in-out;
 }
 
-#quote{
+#quote.before{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    align-content: center;
+    font-style: italic;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+#quote.after{
     padding-top: 10px;
     display: block;
     width: 650px;
@@ -180,6 +216,7 @@ input:focus{
     font-weight: bold;
     font-family:'Courier New', Courier, monospace;
     font-size: 18px;
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.5);
 }
 
 #gps{
@@ -191,6 +228,7 @@ input:focus{
     right: 5%;
     border: 2px inset black;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.5);
 }
 
 #gps span{

@@ -1,8 +1,11 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
-const todo = document.querySelector("#todo-form");
-const todoList = document.querySelector("#todo-list");
+const hello = document.querySelector("#greeting h1");
+const logout = document.querySelector("#greeting button");
+const todo = document.querySelector("#todo");
+const quotebox = document.querySelector("#quote");
+const gps = document.querySelector("#gps");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -16,10 +19,21 @@ function onLoginSubmit(event){
 }
 
 function paintGreetings(username){
-    greeting.innerText = `Hello ${username} !`;
+    hello.innerText = `Hello ${username} !`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     todo.classList.remove(HIDDEN_CLASSNAME);
-    todoList.classList.remove(HIDDEN_CLASSNAME);
+    quotebox.classList.replace("before","after");
+    gps.classList.remove(HIDDEN_CLASSNAME);
+}
+
+function onLogout(event){
+    event.preventDefault();
+    gps.classList.add(HIDDEN_CLASSNAME);
+    quotebox.classList.replace("after","before");
+    todo.classList.add(HIDDEN_CLASSNAME);
+    greeting.classList.add(HIDDEN_CLASSNAME);
+    localStorage.removeItem(USERNAME_KEY);
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -30,3 +44,5 @@ if(savedUsername == null){
 }else{
     paintGreetings(savedUsername);
 }
+
+logout.addEventListener("click",onLogout);

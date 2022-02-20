@@ -1,4 +1,3 @@
-const gps = document.querySelector("#gps");
 const API_KEY = "cded21fb64163e0d720d22f719943370";
 
 function onGeoOk(position){
@@ -12,14 +11,11 @@ function onGeoOk(position){
             const city = document.querySelector("#city");
             city.innerText = `> ${data.name} <`;
             weather.innerText = `${data.weather[0].main} / ${data.main.temp} ºC`;
-            gps.classList.remove("hidden");
     });
 }
 
 function onGeoError(){
-    alert("Can't find you. No weather for you.");
     city.innerText = "Can't find you. No weather for you.";
-    gps.classList.remove("hidden");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

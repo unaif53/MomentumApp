@@ -17,15 +17,18 @@
         <input required maxlength="15" type="text" placeholder="What is your name?" />
         <input type="submit" value="Log In"/>
     </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="todo">
+    <form id="greeting" class="hidden">
+        <h1></h1>
+        <button>Log Out</button>
+    </form>
+    <div id="todo" class="hidden">
         <br>
-        <form id="todo-form" class="hidden">
+        <form id="todo-form">
             <input type="text" placeholder="Write a To Do and Press Enter" required />
         </form>
-        <ul id="todo-list" class="hidden"></ul>
+        <ul id="todo-list"></ul>
     </div>
-    <div id="quote">
+    <div id="quote" class="before">
         <img src="img/book.png">
         <br>
         <span id="sentence"></span>
